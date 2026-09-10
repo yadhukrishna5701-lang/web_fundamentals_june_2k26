@@ -111,7 +111,7 @@ id      title      year     language        run_time
 ```
 
 `http_request for adding new movie`
-url : localhost/8000/movie/
+url : localhost:8000/movie/
 method : POST
 body : {
     "title":"kgf6",
@@ -122,15 +122,15 @@ body : {
 
 
 `http_request for list all movie`
-url : localhost/8000/movie/
+url : localhost:8000/movie/
 method : GET
 
 `http_request for fetching movie detail`
-url : localhost/8000/movie/3/
+url : localhost:8000/movie/3/
 method : GET
 
 `http_request for update movie`
-url : localhost/8000/movie/4/
+url : localhost:8000/movie/4/
 method : PUT
 body : (
     "title":"leo",
@@ -140,7 +140,62 @@ body : (
 )
 
 `http_request for delete movie`
-url : localhost/8000/movie/2/
+url : localhost:8000/movie/2/
 method : DELETE
 
+### Hospital task
+```
+patients
 
+patient_id   patient_name   phone_number   assigned_doctor   department   appointment_date   status   consultation_fee
+    1           aswathi      1234567890     dr jhon              ent         2026-09-06      completed       250
+    2           abhi         1234567899     dr ram             ortho         2026-09-07      completed       500
+    3        unnikuttan      1234567841     dr jinto       physicion         2026-09-08        pending       700
+    4           viss         1234567895     dr gopal             ent         2026-09-09      completed       250
+    5           yadhu        1234567555     dr vicky          dentel         2026-09-01        pending       1000
+
+```
+
+`http_request for adding new patients`
+
+url : localhost:8000/patients/
+method : POST
+body : {
+    "patient_name":"nandhu",
+    "phone_number":9876543210,
+    "assigned_doctor":"dr ramu",
+    "department":"ent",
+    "appointment_date":2026-09-10,
+    "status":"completed",
+    "consultation_fee":"250"
+
+}
+
+`http_request for list all patients`
+
+url : localhost:8000/patients/
+method : GET
+
+`http_request for fetching patients detail`
+
+url : localhost:8000/patients/2/
+method : GET
+
+`http_request for update patients`
+
+url : localhost:8000/patients/3/
+method : PUT
+body : {
+    "patient_name":"jithin",
+    "phone_number":987654355,
+    "assigned_doctor":"dr gokul",
+    "department":"ortho",
+    "appointment_date":2026-09-12,
+    "status":"pending",
+    "consultation_fee":"200"
+}
+
+`http_request for delete patients`
+
+url : localhost:8000/patients/5/
+method : DELETE
