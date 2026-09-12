@@ -167,7 +167,7 @@ body : {
     "department":"ent",
     "appointment_date":2026-09-10,
     "status":"completed",
-    "consultation_fee":"250"
+    "consultation_fee":250
 
 }
 
@@ -198,4 +198,55 @@ body : {
 `http_request for delete patients`
 
 url : localhost:8000/patients/5/
+method : DELETE
+
+```
+expenses
+
+id  title    amount   category  owner    payment_method
+
+1   food      230      dinner   abhi          upi
+2   trip      550      water    aswathi       cash    
+3   movie     700      ticket   viss          card    
+4   dress     650      bill     unnikuttan    upi
+
+```
+
+`http_request for adding new expenses`
+
+url : http:8000/expenses/
+method : POST
+body : {
+    "title":"food"
+    "amount":1000
+    "category":"breakfast"
+    "owner":"yadhu"
+    "payment_method":"cash"
+}
+
+`http_request for list all expenses`
+
+url : http:8000/expenses/
+method : GET
+
+`http_request for fetching expenses detail`
+
+url : http:8000/expenses/4/
+method : GET
+
+`http_request for update expenses`
+
+url : http:8000/expenses/1/
+method : PUT
+body : {
+    "title":"car wash"
+    "amount":500
+    "category":"bill"
+    "owner":"nandhu"
+    "payment_method":"upi"    
+}
+
+`http_request for delete expenses`
+
+url : http:8000/expenses/5/
 method : DELETE
